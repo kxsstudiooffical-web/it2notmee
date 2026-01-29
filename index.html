@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Premium Linktree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .bio {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .link-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .link-btn:active {
+            transform: scale(0.98);
+        }
+        .link-btn i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .link-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transition: width 0.6s, height 0.6s;
+            transform: translate(-50%, -50%);
+        }
+        .link-btn:active::before {
+            width: 300px;
+            height: 300px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .name {
+                font-size: 24px;
+            }
+            .bio {
+                font-size: 14px;
+            }
+            .link-btn {
+                font-size: 16px;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- EDIT HERE: Replace with your profile image URL -->
+        <img src="file:///G:/abc/Downloads/Hashtag_I.jpg" alt="Profile Image" class="profile-img">
+        <!-- EDIT HERE: Replace with your name -->
+        <h1 class="name">It2NotMee</h1>
+        <!-- EDIT HERE: Replace with your bio -->
+        <p class="bio"Content creator sharing ideas, tutorials, and creative projects. Helping people learn and grow through simple, useful content 🚀.</p>
+        <div class="links">
+            <!-- EDIT HERE: Replace with your links and icons -->
+            <a href="https://www.youtube.com/@It2NotMee-offical" class="link-btn" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+            <a href="https://instagram.com/youraccount" class="link-btn" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://twitter.com/youraccount" class="link-btn" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="https://tiktok.com/@youraccount" class="link-btn" target="_blank"><i class="fab fa-tiktok"></i>TikTok</a>
+            <a href="https://linkedin.com/in/yourprofile" class="link-btn" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        </div>
+        <!-- EDIT HERE: Replace with your copyright text -->
+        <footer>&copy; 2023 John Doe. All rights reserved.</footer>
+    </div>
+    <script>
+        // Subtle enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.link-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Add click feedback class for ripple
+                    this.classList.add('clicked');
+                    setTimeout(() => this.classList.remove('clicked'), 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
